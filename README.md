@@ -13,7 +13,7 @@ This project is about developing an Airport Management system using Python. The 
 2. Install all the dependencies by executing the command `pip install -r requirements.txt`
 3. Create the database with the command `python manage.py migrate`
 4. Create a user with the command `python manage.py createsuperuser`
-5. Update the database configuration in the file `settings.py`
+5. Update the database configuration in the file `connect.py`
 
 ## Usage
 
