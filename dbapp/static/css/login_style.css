@@ -1,0 +1,177 @@
+
+/*
+    **Web Technologies Assessment**
+    # Name: ALWIN FRANCIS 
+    # Student ID: 1153275
+*/
+
+
+/* Set the default page element styles */
+*{
+    margin: 0;
+    padding: 0; 
+   
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+/* Container Class Styles, which includes whole Body Styles */
+.container{
+    height: auto;
+    width: 100%;
+   
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #3a5dff;  
+}
+
+.container p {
+    color: rgb(233, 69, 0);
+    margin-left: 35px;
+    padding-top: 20px;
+ }
+
+ /* Class Navbar styles */
+.navbar{
+    width:100%;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #3a5dff;
+}
+
+.logo{
+    width: 685px;
+    height: 104px;
+    cursor: pointer;
+    margin-bottom: auto;
+    padding: 15px;
+}
+
+/*Navigation list styles */
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+
+nav ul li{
+    /*display: inline-block;*/
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    text-align: center;
+    color: white;
+    font-size: 1.3em;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: rgb(233, 175, 0);
+}
+
+/*Navigation list Hover styles */
+nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #33ccff;
+}
+
+/*Class Content styles */
+.content{
+    background-color: white;
+    margin-top: -30px;
+    min-height: 100vh;
+    border-left: 4px solid #3a5dff;
+    border-right: 4px solid #3a5dff;
+    
+}
+
+.content h1{
+    width: 100%;
+    float: center;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    color: #0099cc;
+    padding-top: 20px;
+}
+
+
+
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+.checkbox {
+	  font-weight: normal;
+}
+
+.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 10px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+}
+
+input[type="text"] {
+	  margin-bottom: -1px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+}
+.form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+
+
+
+
+/* Footer styles */
+footer {
+    border-top: 1px solid rgb(0, 21, 255);
+    background-color: #3a5dff;
+    clear: left;
+    width: 100%;
+    margin-top: -20px;
+    padding: 10px 0px;
+ }
+ 
+ footer address {
+    color: white;
+    font-style: normal;
+    font-size: 1.0em;
+    text-align: center;
+ }

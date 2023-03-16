@@ -1,0 +1,96 @@
+{% extends "admin/admin_home.html" %} {% block title %}Add Flights{% endblock %} 
+{% block content %}
+             <!--Content Starts-->
+            <div class="content">
+                <h1> ADD FLIGHTS</h1>
+                <p>Required values are marked by (*)</p>
+                <!--Form Starts-->
+                <form method="POST">
+                    <!-- Flight Booking Request Fieldset Starts-->
+                    <fieldset id="FlightBookingRequest">
+                    <legend>Flight Details</legend>
+
+                    <div class="grid-container">
+                            <div class="grid-item">
+                                <label for="DepatureAirport" style="height: 15px;">Choose An Option For Add Flights:- <span style="color: red;"> *</span></label> 
+                                
+                            </div>
+                            <div class="grid-item">
+                                <label for="userregion" style="height: 15px;"> </label>
+                                <button type="submit" class="btn btn-primary" name="submit_button" value="Add_previous_week" >Same As Previous Week</button>
+                            </div>
+                          
+                    </div>
+
+                        
+                    </fieldset>
+                    <!-- Flight Booking Request Fieldset Ends-->
+                    <br>
+                    <br>
+                    <!-- Passenger Details Fieldset Starts-->
+                    <fieldset id="PassengerDetails">
+                    <legend>ADD NEW FLIGHTS</legend>
+                        <div class="grid-container">
+                            <div class="grid-item" >
+                            <label for="flight_NUm">FLIGHT NUMBER<span style="color: red;"> *</span> </label>
+                            <input type="text" name="flight_NUm" id="flight_NUm" placeholder="FLIGHT NUMBER" >
+                            </div>
+
+                            <div  class="grid-item">
+                            <label for="aircraft_name">AirCraft <span style="color: red;"> *</span></label>
+                                <select name="aircraft_name" id="aircraft_name">
+                                    <option value="">Select An Option</option>
+                                    <option value="ZK-NEE">ZK-NEE</option>
+                                    <option value="ZK-NEF">ZK-NEF</option> 
+                                    <option value="ZK-NEH">ZK-NEH</option>
+                                    <option value="ZK-NEJ">ZK-NEJ</option>
+                                    <option value="ZK-NEK">ZK-NEK</option>
+                                    <option value="ZK-PDM">ZK-PDM</option>
+                                    <option value="ZK-PLB">ZK-PLB</option>
+                                    <option value="ZK-PLS">ZK-PLS</option> 
+                                    <option value="ZK-SAA">ZK-SAA</option>
+                                    <option value="ZK-SAY">ZK-SAY</option> 
+                                    
+                                </select>
+                            </div>
+                            
+                        
+                            <div class="grid-item" >
+                            <label for="flight_date">Flight Date <span style="color: red;"> *</span> </label>
+                            <input type="date" name="flight_date" id="flight_date" placeholder="(nnn) nnn-nnnn" >
+                            </div>
+                        </div>
+                        <div class="grid-container">
+                            <div class="grid-item" >
+                                <label for="dep_time">Departure Time</label>
+                                <input type="datetime" name="dep_time" id="dep_time" placeholder="Enter Address">
+                            </div>
+                            <div class="grid-item" >
+                                <label for="arr_time">Arrival Time </label>
+                                <input type="datetime" name="arr_time" id="arr_time" placeholder="Enter City/Town">
+                            </div>
+                           
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="grid-item">
+                               
+                               
+                            </div>
+                            <div class="grid-item">
+
+                            </div>
+                            <div class="grid-item">
+                                <label for="userregion" style="height: 25px;"> </label>
+                               
+                                <button type="submit" name="submit_button" value="add_new" class="btn btn-primary">Submit</button>
+                            </div>               
+                        </div>
+                    </fieldset>
+                    <!-- Passenger Details Fieldset Ends-->
+                </form>
+                <!--Form Ends-->
+                <br>
+                <br>
+            </div>
+ {% endblock %}

@@ -1,0 +1,67 @@
+{% extends "home.html" %} {% block title %}LOG IN{% endblock %} 
+{% block content %}
+
+
+       
+            <div class="content">
+                <h1> SIGN IN</h1>
+               
+                <!--Form Starts-->
+                <form  method = 'POST'>
+                    <!-- Flight Booking Request Fieldset Starts-->
+                  
+                    <!-- Passenger Details Fieldset Starts-->
+                    <fieldset >
+                        <div class="grid-container">
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                        </div>
+                        <div class="grid-container">
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                        </div>
+                        <div class="grid-container">
+                        <div  class="grid-item"></div>
+                        
+                        <div  class="grid-item">
+                        <label for="loginemail">UserID/Email ID:-</label>
+                        <input type="email" name="loginemail" id="loginemail" placeholder="Enter Email Id" required>
+                        <span class="msg">{{ msg }}</span>
+                        </div>
+                        <div  class="grid-item">
+                            <label for="userregion" style="height: 25px;"> </label>
+                            <button type="submit" class="btn btn-primary">LOG-IN</button>
+                        </div>
+                        
+                        </div>
+                        <div class="grid-container">
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                        </div>
+                        <div class="grid-container">
+                            <div  class="grid-item">
+
+                            </div>
+                            <div  class="grid-item">
+
+                            </div>
+                            <div  class="grid-item">
+                                <label for="useremail" style="height: 25px; text-align: center;"> Are You Not Register?</label>
+                                <button type="submit" class="btn btn-success" onclick="window.location.href='/passenger_register'" >REGISTER</button>
+                            </div>
+                            <div  class="grid-item"></div>
+                        </div>
+                     
+                    </fieldset>
+                    <!-- Passenger Details Fieldset Ends-->
+                </form>
+                <!--Form Ends-->
+                <br>
+                <br>
+            </div>
+           
+
+{% endblock %}

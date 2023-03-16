@@ -1,0 +1,137 @@
+{% extends "home.html" %} {% block title %}Our Page{% endblock %} 
+{% block content %}
+             <!--Content Starts-->
+            <div class="content">
+                <h1> YOUR DETAILS</h1>
+                
+
+                <p>Required values are marked by (*)</p>
+                <!--Form Starts-->
+                {% for passenger_result in passenger_id  %} 
+                <input type="hidden" name="passenger_id" id="passenger_id" value="{{passenger_result[0]}}" /> 
+                {% endfor %}
+                    <form method="POST">
+                      
+                        {% for result in dbresult  %} 
+                        <input type="hidden" name="passenger_id" id="passenger_id" value="{{result[0]}}" /> 
+                    <!-- Flight Booking Request Fieldset Starts-->
+                    <fieldset >
+                    <legend>Personal Details </legend>
+                        <div class="grid-container">
+                            <div class="grid-item" >
+                                <label for="username">First Name<span style="color: red;"> *</span> </label>
+                                <input name="userfirstname" id="userfirstname"   value="{{result[1]}}" />
+                                </div>
+        
+                                <div class="grid-item" >
+                                <label for="username">Last Name<span style="color: red;"> *</span> </label>
+                                <input name="userlastname" id="userlastname"   value="{{result[2]}}"/>
+                                </div>
+                                <div  class="grid-item">
+                                    <label for="useremail">Email <span style="color: red;"> *</span></label>
+                                    <input type="email" name="useremail" id="useremail"  value="{{result[3]}}" />
+                                    </div>
+                            
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="grid-item" >
+                                <label for="userphone">Phone Number <span style="color: red;"> *</span> </label>
+                                <input type="text" name="userphone" id="userphone"  value="{{result[4]}}">
+                                </div>
+                                <div class="grid-item" >
+                                    <label for="userpassportnumber">Passport Number <span style="color: red;"> *</span> </label>
+                                    <input type="text" name="userpassportnumber" id="userpassportnumber" value="{{result[5]}}" >
+                                    </div>
+        
+                                    <div class="grid-item" >
+                                        <label for="userdateofbirth">Date Of Birth <span style="color: red;"> *</span></label>
+                                        <input type="date" name="userdateofbirth" id="userdateofbirth"  value="{{result[6]}}" }>
+                                    </div>
+                        </div>
+                        {% endfor %}
+                        <div class="grid-container">
+                            <div class="grid-item">
+                                <label for="userregion" style="height: 25px;"> </label>
+                                <input type="hidden" name="useremail" id="useremail">
+                            </div>
+                                <div class="grid-item" >
+                                    <label for="userregion" style="height: 25px;"> </label>
+                                   
+                                    </div>
+        
+                                    <div class="grid-item">
+                                        <p class="paragraph">Do You Want To Edit?</p>
+                                        <button type="submit" class="btn btn-primary">EDIT</button>
+                                      
+                                    </div>
+                        </div>
+
+
+                    </fieldset>
+                  
+                    <!-- Flight Booking Request Fieldset Ends-->
+                    <br>
+                    <br>
+                    <!-- Passenger Details Fieldset Starts-->
+                    <fieldset >
+                    <legend>Your Booking</legend>
+                    <table class="table table-striped table-hover ">
+                        <thead style="width:100%;text-align:left;color:white; background-color:rgb(0, 128, 255);">
+                            {% for col_name in existing_col_names %}
+                            <th>{{col_name}}</th>
+                            {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for exist in dbexist %}
+                            <tr>
+                                <td><a href="/customer/update?customerid={{exist[0]}}">{{exist[0]}}</a></td>
+                                <td>{{exist[1]}}</td>
+                                <td>{{exist[2]}}</td>
+                                <td>{{exist[3]}}</td>
+                                <td>{{exist[4]}}</td>
+                                <td>{{exist[5]}}</td>
+                                <td>{{exist[6]}}</td>
+                                <td>{{exist[7]}}</td>
+                                <td>{{exist[8]}}</td>
+                            </tr>
+                            {% endfor %}
+                      </tbody>   
+                    </table>
+                    </fieldset>
+                    <!-- Passenger Details Fieldset Ends-->
+                    <br>
+                    <fieldset >
+                        <legend>New Booking</legend>
+                            <div class="grid-container">
+                            <div class="grid-item">
+                            <label for="username"> Do You Want Add New Flight?</label>
+                            <button type="submit" class="btn btn-success"  name="submit_button" value="Add_new_flight" onclick="window.location.href='passenger_add_flight'"   >CONTINUE</button>
+                            </div>
+    
+                            
+                            </div>
+                           
+    
+                            <div class="grid-container">
+                                <div class="grid-item">
+                                  
+                                </div>
+                                <div class="grid-item">
+    
+                                </div>
+                                <div class="grid-item">
+                                    <label for="userregion" style="height: 25px;"> </label>
+                                    
+                                    <button type="submit" class="btn btn-primary"  name="submit_button" value="logout_page" onclick="window.location.href='/logout'"  >Logout</button>
+                                </div>               
+                            </div>
+                        </fieldset>
+                </form>
+                <!--Form Ends-->
+                <br>
+                <br>
+            </div>
+
+            {% endblock %}

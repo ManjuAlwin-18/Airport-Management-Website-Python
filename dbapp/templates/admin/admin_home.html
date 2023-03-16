@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   
+    <head>
+     
+        <meta charset="UTF-8" />
+        <title>{% block title %} Home{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home_style.css')}}"/> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+
+    </head>
+  
+    <body>
+
+      <div class="navbar">
+       
+          <nav class="navbar navbar-expand-sm justify-content-center" style="background-color:#3a5dff ;">
+            <img src="{{ url_for('static', filename = 'images/logo_blue.jpg')}}"  class="logo" alt="Flight Book"  /> 
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin/passenger_list">Passenger Lists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin/flight_lists">Flight Lists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin/manager_add_flights">Add Flights</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin/passenger_register">Logout</a>
+                </li>
+              </ul>
+            </nav>
+      </div>
+        <div class="container">
+          {% block content %} {% endblock %}
+        </div> 
+
+
+        <div class="footer">
+          <footer>
+              <address>
+              CONTACT US:-
+              123 Cessna Lane &bull;
+              Tāhunanui &bull;
+              Nelson 7011 &bull;
+              fly@airwhakatu.co.nz &bull;
+              Phone Number:- 03 555 1234 
+              </address>
+          </footer>
+      </div>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+      ></script>
+    </body>
+    
+</html> 

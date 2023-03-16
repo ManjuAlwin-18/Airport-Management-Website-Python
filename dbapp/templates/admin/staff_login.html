@@ -1,0 +1,67 @@
+{% extends "admin/admin_home.html" %} {% block title %}Staff Login{% endblock %} 
+{% block content %}
+
+             <!--Content Starts-->
+            <div class="content">
+                <h1>STAFF LOG IN</h1>
+               
+                <!--Form Starts-->
+                <form method="POST">
+                    <!-- Flight Booking Request Fieldset Starts-->
+                  
+                    <!-- Passenger Details Fieldset Starts-->
+                    <fieldset id="PassengerDetails">
+                        <div class="grid-container">
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                        </div>
+                        <div class="grid-container">
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                        </div>
+                        <div class="grid-container">
+                            <div  class="grid-item"></div>
+                        <div  class="grid-item">
+                        <label for="useremail">UserID/Email ID:-</label>
+                        <select name="staff_login" id="staff_login" required>
+                           
+                            <option value="1">Jane Preston</option>
+                            <option value="2">Wiremu Aripata</option> 
+                            <option value="3">Li Chang</option>
+                            <option value="5">Jordan Miller</option> 
+                            <option value="7">Scott Cartwright</option> 
+                            <option value="8">Sarah Sparrow</option>       
+                        </select>
+                        <span class="msg">{{ msg }}</span>
+                        </div>
+                        <div  class="grid-item">
+                            <label for="userregion" style="height: 25px;"> </label>
+                            <button type="submit" class="btn btn-primary"  >Submit</button>
+                        </div>
+                        
+                        </div>
+                        <div class="grid-container">
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                            <div  class="grid-item"></div>
+                        </div>
+                        <div class="grid-container">
+                            <div  class="grid-item">
+
+                            </div>
+                            <div  class="grid-item">
+                              
+                            </div>
+                            <div  class="grid-item"></div>
+                        </div>
+                     
+                    </fieldset>
+                    <!-- Passenger Details Fieldset Ends-->
+                </form>
+                <!--Form Ends-->
+                <br>
+                <br>
+            </div>
+ {% endblock %}

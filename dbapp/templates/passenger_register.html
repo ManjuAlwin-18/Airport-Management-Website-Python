@@ -1,0 +1,69 @@
+{% extends "home.html" %} {% block title %}Our Page{% endblock %} 
+{% block content %}
+           
+            <div class="content">
+                <h1> REGISTER </h1>
+                <p>Required values are marked by (*)</p>
+                <!--Form Starts-->
+                <form  method="POST">
+                    
+                    
+                    <fieldset id="PassengerDetails">
+                   
+                        <div class="grid-container">
+                        <div class="grid-item" >
+                        <label for="username">First Name<span style="color: red;"> *</span> </label>
+                        <input name="userfirstname" id="userfirstname" placeholder="Enter First Name" required>
+                        </div>
+
+                        <div class="grid-item" >
+                        <label for="username">Last Name<span style="color: red;"> *</span> </label>
+                        <input name="userlastname" id="userlastname" placeholder="Enter Last Name" required>
+                        </div>
+                        </div>
+
+                        <div class="grid-container">
+                        <div  class="grid-item">
+                        <label for="useremail">Email <span style="color: red;"> *</span></label>
+                        <input type="email" name="useremail" id="useremail" placeholder="Enter Email Id" required>
+                        </div>
+                        
+                    
+                        <div class="grid-item" >
+                        <label for="userphone">Phone Number <span style="color: red;"> *</span> </label>
+                        <input type="number" name="userphone" id="userphone" placeholder="(nnn) nnn-nnnn" required>
+                        </div>
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="grid-item" >
+                            <label for="userpassportnumber">Passport Number <span style="color: red;"> *</span> </label>
+                            <input type="number" name="userpassportnumber" id="userpassportnumber" placeholder="Enter Passport Number" required>
+                            </div>
+
+                            <div class="grid-item" >
+                                <label for="userdateofbirth">Date Of Birth <span style="color: red;"> *</span></label>
+                                <input type="date" name="userdateofbirth" id="userdateofbirth" required>
+                            </div>
+                            
+                        </div>
+
+                        <div class="grid-container">
+                           
+                            <div class="grid-item">
+
+                            </div>
+                            <div class="grid-item">
+                                <label for="userregion" style="height: 25px;"> </label>
+                                
+                                <button type="submit" class="btn btn-primary"   >REGISTER</button>
+                            </div>               
+                        </div>
+                    </fieldset>
+                    <!-- Passenger Details Fieldset Ends-->
+                </form>
+                <!--Form Ends-->
+                <br>
+                <br>
+            </div>
+            {% endblock %}

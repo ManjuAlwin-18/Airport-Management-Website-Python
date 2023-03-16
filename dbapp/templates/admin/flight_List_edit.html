@@ -1,0 +1,130 @@
+{% extends "admin/admin_home.html" %} {% block title %}Flights lists{% endblock %} 
+{% block content %}
+             <!--Content Starts-->
+            <div class="content">
+                <h1> FLIGHT MANIFEST </h1>
+                <p>Required values are marked by (*)</p>
+                <!--Form Starts-->
+                <form method="POST">
+                    {% for result in dbresult  %} 
+                    <!-- Flight Booking Request Fieldset Starts-->
+                    <input type="hidden" name="flight_id" id="flight_id" value="{{result[0]}}" /> 
+                    <fieldset id="FlightBookingRequest">
+                    <legend>Flight Details </legend>
+                    <div class="grid-container">
+                        <div class="grid-item" >
+                        <label for="flight_NUm">FLIGHT NUMBER<span style="color: red;"> *</span> </label>
+                        <input type="text" name="flight_NUm" id="flight_NUm" value="{{result[1]}}" placeholder="FLIGHT NUMBER" >
+                        </div>
+
+                        <div  class="grid-item">
+                        <label for="aircraft_name">AirCraft <span style="color: red;"> *</span></label>
+                            <select name="aircraft_name" id="aircraft_name">
+                                <option value="{{result[10]}}">{{result[10]}}</option>
+                                <option value="ZK-NEE">ZK-NEE</option>
+                                <option value="ZK-NEF">ZK-NEF</option> 
+                                <option value="ZK-NEH">ZK-NEH</option>
+                                <option value="ZK-NEJ">ZK-NEJ</option>
+                                <option value="ZK-NEK">ZK-NEK</option>
+                                <option value="ZK-PDM">ZK-PDM</option>
+                                <option value="ZK-PLB">ZK-PLB</option>
+                                <option value="ZK-PLS">ZK-PLS</option> 
+                                <option value="ZK-SAA">ZK-SAA</option>
+                                <option value="ZK-SAY">ZK-SAY</option> 
+                                
+                            </select>
+                        </div>
+                        
+                    
+                        <div class="grid-item" >
+                        <label for="flight_date">Flight Date <span style="color: red;"> *</span> </label>
+                        <input type="date" name="flight_date" value="{{result[3]}}" id="flight_date"  >
+                        </div>
+                    </div>
+                    <div class="grid-container">
+                        <div class="grid-item" >
+                            <label for="dep_time">Departure Time</label>
+                            <input type="datetime" name="dep_time" id="dep_time" value="{{result[4]}}">
+                        </div>
+                        <div class="grid-item" >
+                            <label for="arr_time">Arrival Time </label>
+                            <input type="datetime" name="arr_time" id="arr_time"value="{{result[5]}}">
+                        </div>
+
+                        <div  class="grid-item">
+                            <label for="flight_status">Flight Status <span style="color: red;"> *</span></label>
+                                <select name="flight_status" id="flight_status">
+                                    <option value="{{result[9]}}">{{result[9]}}</option>
+                                    <option value="Landed">Landed</option>
+                                    <option value="Cancelled">Cancelled</option> 
+                                    <option value="Delayed">Delayed</option>
+                                    <option value="On time">On time</option>
+                                    
+                                    
+                                </select>
+                            </div>
+                       
+                    </div>
+
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <label for="dep_est_time">Estimated Departure Time</label>
+                            <input type="datetime" name="dep_est_time" id="dep_est_time" value="{{result[7]}}">
+                           
+                        </div>
+                        <div class="grid-item">
+                            <label for="esti_arr_time">Estimated Arrival Time</label>
+                            <input type="datetime" name="esti_arr_time" id="esti_arr_time" value="{{result[8]}}">
+                        </div>
+                        <div class="grid-item">
+                            <label for="userregion" style="height: 25px;"> </label>
+                           
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>               
+                    </div>
+
+
+                    </fieldset>
+                    {% endfor %}
+                    <!-- Flight Booking Request Fieldset Ends-->
+                    <br>
+                    <br>
+                    <!-- Passenger Details Fieldset Starts-->
+                    <fieldset id="PassengerDetails">
+                    <legend>Passenger Lists</legend>
+                    <table class="table table-striped table-hover ">
+                        <thead style="width:100%;text-align:left;color:white; background-color:rgb(0, 128, 255);">
+                            <tr>
+                                {% for col_name in dbcol_passenger %}
+                                <th>{{col_name}}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for result in dbpassengerresult %}
+                            <tr>
+                                <td><a href="/admin/passenger_List_edit?passenger_id={{result[0]}}">{{result[0]}}</a></td>
+                                <td>{{result[1]}}</td>
+                                <td>{{result[2]}}</td>
+                                <td>{{result[3]}}</td>
+                                <td>{{result[4]}}</td>
+                                <td>{{result[5]}}</td>
+                                <td>{{result[6]}}</td>
+                                
+
+                            </tr>
+                            {% endfor %}
+                        </tbody>   
+                       
+                    </table>
+                    </fieldset>
+                    <!-- Passenger Details Fieldset Ends-->
+                   
+                  
+                </form>
+                <!--Form Ends-->
+                <br>
+                <br>
+            </div>
+{% endblock %}
+           

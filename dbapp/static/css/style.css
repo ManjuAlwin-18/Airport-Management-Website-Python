@@ -1,0 +1,136 @@
+
+/*
+    **Web Technologies Assessment**
+    # Name: ALWIN FRANCIS 
+    # Student ID: 1153275
+*/
+
+
+/* Set the default page element styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Container-body Class Styles, which includes whole Body Styles */
+.container-body{
+    height: auto;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    clear: left;
+    position: relative;
+    box-sizing: border-box;
+    background-color:#3a5dff ;   
+}
+
+ /* Class Navbar styles */
+.navbar-body{
+    width:100%;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #3a5dff;
+}
+
+.logo-head{
+    width: 685px;
+    cursor: pointer;
+    margin-bottom: auto;
+    padding: 15px;
+    -webkit-box-sizing: none;
+    box-sizing: 0;
+}
+
+ /* Class Navbar styles */
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+nav ul li{
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    text-align: center;
+    color: white;
+    font-size: 1.3em;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: rgb(233, 175, 0);
+}
+
+/*Navigation list Hover styles */
+nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #33ccff;
+}
+
+/*Class Content styles */
+.content{
+    background-color: white;
+    margin-top: -30px;
+    border-left: 4px solid #3a5dff;
+    border-right: 4px solid #3a5dff;
+}
+.content h1{
+    width: 100%;
+    float: center;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    color: #009999;
+    padding-top: 20px;
+}
+
+.content h2{
+    font-size: 30px;
+    font-family: 'Times New Roman', serif;
+    color: #009999;
+    padding-left: 30px;
+}
+
+/* Flight ID link styles */
+table tr td a{
+    color: #0000ff;
+    text-decoration: none;
+  
+}
+
+/* Table styles */
+.table{
+    padding-left: 20px;
+
+}
+
+/* Linkaddress styles */
+.linkaddress{
+    width: 100%;
+}
+
+/* Footer styles */
+footer {
+    border-top: 1px solid rgb(0, 21, 255);
+    background-color: #3a5dff;
+    clear: left;
+    width: 100%;
+    margin-top: -20px;
+    padding: 10px 0px;
+ }
+ 
+ footer address {
+    color: white;
+    font-style: normal;
+    font-size: 1.0em;
+    text-align: center;
+ }

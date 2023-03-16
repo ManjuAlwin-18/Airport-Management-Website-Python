@@ -1,0 +1,250 @@
+
+/*
+    **Web Technologies Assessment**
+    # Name: ALWIN FRANCIS 
+    # Student ID: 1153275
+*/
+
+
+/* Set the default page element styles */
+*{
+    margin: 0;
+    padding: 0; 
+}
+
+/* Container Class Styles, which includes whole Body Styles */
+.container{
+    height: auto;
+    width: 100%;
+    clear: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: #3a5dff;  
+}
+
+.container p {
+    color: rgb(233, 69, 0);
+    margin-left: 35px;
+    padding-top: 20px;
+ }
+
+ /* Class Navbar styles */
+.navbar{
+    width:100%;
+    height: 20vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #3a5dff;
+}
+
+.logo{
+    width: 685px;
+    height: 104px;
+    cursor: pointer;
+    margin-bottom: auto;
+    padding: 15px;
+}
+
+/*Navigation list styles */
+nav{
+    flex: 1;
+    padding-left: 60px;
+}
+
+nav ul li{
+    /*display: inline-block;*/
+    list-style: none;
+    margin: 0px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    width: 250px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    text-align: center;
+    color: white;
+    font-size: 1.3em;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: rgb(233, 175, 0);
+}
+
+/*Navigation list Hover styles */
+nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #33ccff;
+}
+
+/*Class Content styles */
+.content{
+    background-color: white;
+    margin-top: -30px;
+    border-left: 4px solid #3a5dff;
+    border-right: 4px solid #3a5dff;
+    height: 75vh;
+}
+
+.content h1{
+    width: 100%;
+    float: center;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    color: #0099cc;
+    padding-top: 20px;
+}
+
+/* Grid styles */
+.grid-container {
+    display: grid;
+    column-gap: 3px;
+    row-gap:5px;
+    grid-template-columns: auto auto auto;
+   padding: 10px;
+  }
+  
+  .grid-item {
+    padding: 5px;
+   text-align: left;
+  }
+ 
+.content h2{
+    font-size: 30px;
+    font-family: 'Times New Roman', serif;
+    color: #009999;
+    padding: 10px;
+}
+
+/*Field set styles */
+fieldset{
+    background-color: white;
+    border: 2px solid #006699; 
+    margin:10px 100px 10px 16%;
+    width:60%;
+    text-align: center;
+    height: 50vh;
+    }
+
+/*Legend styles */
+legend{
+    background-color: #0099cc;
+    color: white;
+    padding: 8px 8px;
+    text-indent: 10px;
+    widows: 100%;
+    }
+
+/*Flight Booking Request Fieldset Details styles */
+#FlightBookingRequest{
+    padding: 25px 30px;
+}
+
+/* Passenger Details Fieldset styles */
+#PassengerDetails{
+    padding: 25px 30px;
+}
+
+/* Labels styles */
+label{
+clear: left;
+display: block;
+font-size: 18px;
+margin: 10px 4% 5px 10px;
+width: 100%;
+text-align: left;
+}
+
+/* Input styles */
+input{
+display: block;
+height: 50%;
+font-size: 0.9em;
+margin: 10px 4% 7px 10px;
+width: 100%;
+text-align:left;
+}
+
+/* Post Code Input styles */
+#userpostCode{
+display: block;
+height: 50%;
+font-size: 0.9em;
+margin: 10px 4% 7px 10px;
+width: 100%;
+}
+
+/* Select Input styles */
+select{
+    display: block;
+    height: 50%;
+    margin: 15px 4% 7px 10px;
+    width: 100%;
+    padding-left: 10px;
+    float: left;
+    font-size: 0.9em;
+    margin: 7px 7px;
+    }
+
+/* Button Input styles */
+button{
+    display: block;
+    height: 50%;
+    color: white;
+    margin: 15px 4% 7px 10px;
+    width:175px;
+    padding-left: 10px;
+    float: left;
+    font-size: 0.9em;
+    margin: 7px 7px;
+}
+
+/* Checkbox Fieldset styles */
+fieldset.optionGroup{
+    border-width: 0px;
+}
+
+/* Checkbox Fieldset Label styles */
+fieldset.optionGroup label{
+    display: inline;
+    float: none;
+    margin: 0px 3px 0px 0px;
+    width: 30px;
+}
+
+/* Checkbox Fieldset Input styles */
+fieldset.optionGroup input{
+    display: inline;
+    float: none;
+    margin: 0px 4px 0px 0px;
+    width: 30px; 
+}
+
+.linkaddress{
+    width: 100%;
+}
+
+
+/* Footer styles */
+footer {
+    border-top: 1px solid rgb(0, 21, 255);
+    background-color: #3a5dff;
+    clear: left;
+    width: 100%;
+    margin-top: -20px;
+    padding: 10px 0px;
+ }
+ 
+ footer address {
+    color: white;
+    font-style: normal;
+    font-size: 1.0em;
+    text-align: center;
+ }
